@@ -4,17 +4,17 @@ import 'package:praktikum_2/tugas.dart';
 import 'latihan.dart';
 
 void main() {
-  runApp(const TabBarDemo());
+  runApp(const Praktikum());
 }
 
-class TabBarDemo extends StatefulWidget {
-  const TabBarDemo({super.key});
+class Praktikum extends StatefulWidget {
+  const Praktikum({super.key});
 
   @override
-  State<TabBarDemo> createState() => _TabBarDemoState();
+  State<Praktikum> createState() => _PraktikumState();
 }
 
-class _TabBarDemoState extends State<TabBarDemo> {
+class _PraktikumState extends State<Praktikum> {
   int counter = 0;
   String latihan = "Bilangan genap dan kelipatan tiga : ";
   String tugas = "Bilangan prima : ";
@@ -78,7 +78,7 @@ class _TabBarDemoState extends State<TabBarDemo> {
             children: [
               percobaanWidget(counter, genap, ganjil),
               latihanWidget(counter, latihan),
-              tugasWidget(counter, tugas)
+              tugasWidget(counter, tugas),
             ],
           ),
           floatingActionButton: FloatingActionButton(
