@@ -69,7 +69,7 @@ class DetailScreen extends StatelessWidget {
                   place.description,
                   textAlign: TextAlign.center,
                 ),
-              ),
+              ), 
               SizedBox(
                 height: 200,
                 child: ListView.builder(

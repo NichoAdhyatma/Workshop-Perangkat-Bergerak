@@ -6,6 +6,7 @@ class TourismPlace {
   String openDays;
   String openHours;
   int price;
+  double rating;
   List<String> gallery;
 
   TourismPlace({
@@ -17,6 +18,7 @@ class TourismPlace {
     required this.openHours,
     required this.price,
     required this.gallery,
+    required this.rating,
   });
 }
 
@@ -35,18 +37,40 @@ var tourismPlaceList = [
     openDays: "Buka Setiap Hari",
     openHours: "08:00 - 16:00",
     price: 10000,
+    rating: 4.76,
   ),
 
-  // TourismPlace(
-  //   name: 'Kelenteng Sanggar Agung',
-  //   location: 'Kenjeran',
-  //   imageAsset: 'assets/images/klenteng.jpg',
-  // ),
-  // TourismPlace(
-  //   name: 'House of Sampoerna',
-  //   location: 'Krembangan Utara',
-  //   imageAsset: 'assets/images/sampoerna.jpg',
-  // ),
+  TourismPlace(
+    name: 'Kelenteng Sanggar Agung',
+    location: 'Kenjeran',
+    imageAsset: 'assets/images/klenteng_sanggar_agung.jpg',
+    description:
+        'Kelenteng Sanggar Agung atau Klenteng Hong San Tang adalah sebuah klenteng di Kota Surabaya. Alamatnya berada di Jalan Sukolilo Nomor 100, Pantai Ria Kenjeran, Surabaya. Kuil ini, selain menjadi tempat ibadah bagi pemeluk Tridharma, juga menjadi tempat tujuan wisata bagi para wisatawan. Klenteng ini dibuka pada tahun 1999.',
+    gallery: [
+      'assets/images/klenteng_sanggar_agung_2.jpg',
+      'assets/images/klenteng_sanggar_agung_3.jpeg',
+      'assets/images/klenteng_sanggar_agung_4.jpg',
+    ],
+    openDays: "Buka Setiap Hari",
+    openHours: "08:00 - 16:00",
+    price: 10000,
+    rating: 4.34,
+  ),
+  TourismPlace(
+    name: 'House of Sampoerna',
+    location: 'Krembangan Utara',
+    imageAsset: 'assets/images/sampoerna.jpg',
+    description: "The House of Sampoerna is a tobacco museum and headquarters of Sampoerna located in Surabaya. The main building's architectural style influenced by Dutch colonial-style compound was built in 1862, and is now a preserved historical site. Previously used as an orphanage managed by the Dutch‚ it was purchased in 1932, by Liem Seeng Tee‚ the founder of Sampoerna‚ with the intent of it being used as Sampoerna's first",
+    gallery: [
+      'assets/images/sampoerna_2.jpeg',
+      'assets/images/sampoerna_3.jpg',
+      'assets/images/sampoerna_4.jpeg',
+    ],
+    openDays: "Buka Setiap Hari",
+    openHours: "09:00 - 17:00",
+    price: 90000,
+    rating: 4.64,
+  ),
   // TourismPlace(
   //   name: 'Tugu Pahlawan',
   //   location: 'Alun-alun contong',
