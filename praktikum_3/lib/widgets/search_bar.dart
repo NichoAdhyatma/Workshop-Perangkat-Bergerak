@@ -9,12 +9,13 @@ Widget mySearchBar() {
           child: Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-              color: Colors.white,
+            
               borderRadius: BorderRadius.circular(12),
             ),
             child: const TextField(
               decoration: InputDecoration(
                   hintText: "Search Destination",
+                
                   prefixIcon: Icon(
                     Icons.search,
                     color: Colors.grey,
@@ -31,7 +32,7 @@ Widget mySearchBar() {
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.blue[400],
+            color: ThemeData().colorScheme.primary,
           ),
           child: const Icon(
             Icons.settings_accessibility,
