@@ -19,11 +19,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: NewsListPage.routeName,
+      home: const DefaultTabController(length: 3, child: NewsListPage()),
       routes: {
         NewsListPage.routeName: (context) => const NewsListPage(),
-        ArticleDetailPage.routeName: (context) => ArticleDetailPage(
-            article: ModalRoute.of(context)?.settings.arguments as Article),
+        ArticleDetailPage.routeName: (context) => const ArticleDetailPage(),
         ArticleWebView.routeName: (context) => ArticleWebView(
             url: ModalRoute.of(context)?.settings.arguments as String),
       },

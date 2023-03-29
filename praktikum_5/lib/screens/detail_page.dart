@@ -6,12 +6,15 @@ import 'package:praktikum_5/screens/web_view.dart';
 class ArticleDetailPage extends StatelessWidget {
   static const routeName = "/article-detail";
 
-  const ArticleDetailPage({super.key, required this.article});
-
-  final Article article;
+  const ArticleDetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var arguments = ModalRoute.of(context)?.settings.arguments as List<Object>;
+
+    Article article = arguments[0] as Article;
+    String tag = arguments[1] as String;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(article.title),
@@ -21,12 +24,13 @@ class ArticleDetailPage extends StatelessWidget {
         child: Column(
           children: [
             PhotoHero(
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-                photo: article.urlToImage,
-                width: MediaQuery.of(context).size.width,
-              ),
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              tag: tag,
+              photo: article.urlToImage,
+              width: MediaQuery.of(context).size.width,
+            ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
